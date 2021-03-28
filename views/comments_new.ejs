@@ -1,0 +1,22 @@
+<%- include("partials/header") %>
+<div class="container">
+    <h1>Add new comment</h1>
+   <!-- <form action="/comics/comicID/comments/" method="POST">
+      <div class="form-group">
+        <label for="text">Username:</label>
+        <textarea class="form-control" name="user" id="user" rows="8" cols="10" placeholder="Username" required></textarea>
+        </div>
+        <input type="hidden" name="user" value="USER">
+        <button type="submit" class="btn btn-warning">Submit username</button>
+    </form>
+  -->           
+    <form action="/comics/<%= comicId %>/comments/" method="POST">
+      <div class="form-group">
+        <label for="text">Comment text</label>
+        <textarea class="form-control" name="text" id="text" rows="8" cols="80" placeholder="Comment text here.." required></textarea>
+        </div>
+        <input type="hidden" name="comicId" value="<%= comicId %>">
+        <button type="submit" class="btn btn-warning">Submit comment</button>
+    </form>
+</div>
+

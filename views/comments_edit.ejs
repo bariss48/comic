@@ -1,0 +1,11 @@
+<%- include("partials/header") %>
+<div class="container">
+    <h1>Edit comment</h1>
+    <form action="/comics/<%= comic._id %>/comments/<%= comment._id%>?_method=PUT" method="POST">
+      <div class="form-group">
+        <label for="text">Edit text</label>
+        <textarea class="form-control" name="text" id="text" rows="8" cols="80" placeholder="Comment text here.." required><%= comment.text %> </textarea>
+      </div>
+      <button type="submit" class="btn btn-warning">Edit comment</button>
+    </form>
+</div>
